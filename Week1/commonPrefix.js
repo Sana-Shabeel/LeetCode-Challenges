@@ -1,0 +1,7 @@
+/*
+
+LONGEST COMMON PREFIX
+
+
+
+*/
