@@ -11,7 +11,6 @@ Example 1:
 Input: strs = ["flower","flow","flight"]
 Output: "fl"
 
-
 Example 2:
 
 Input: strs = ["dog","racecar","car"]
@@ -21,8 +20,6 @@ Explanation: There is no common prefix among the input strings.
 */
 
 /*
-
-
 
 FAILED !!!!
 
@@ -83,7 +80,6 @@ console.log(longestCommonPrefix(["a", "ac"]));
 
 // ["flower", "flower", "flower", "flower"]
 
-
 */
 
 // NEW APPROACH
@@ -104,3 +100,15 @@ var longestCommonPrefix = function (strs) {
 };
 
 console.log(longestCommonPrefix(["flower", "flow", "flight"]));
+
+function xmastree(num) {
+  for (let i = 0; i < num; i++) {
+    const start = "*".repeat(i);
+    const blankspace = " ".repeat(num - i);
+    console.log(blankspace + start + "*" + start);
+  }
+
+  return "x";
+}
+
+console.log(xmastree(5));

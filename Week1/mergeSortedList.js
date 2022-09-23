@@ -69,16 +69,35 @@ Output: [1,1,2,3,4,4]
   
   
   
+ 
+  
+  
+  
   
 */
 
 const mergeTwoLists = function (l1, l2) {
-  return l2
-    .split("")
-    .map((el) => l1.includes(el))
-    .includes(false)
-    ? false
-    : true;
+  let dummy = new ListNode(-Infinity);
+  let head = dummy;
+
+  while (l1 && l2) {
+    if (l1.value <= l2.value) {
+      dummy.next = l1;
+      l1 = l1.next;
+    } else {
+      dummy.next = l2;
+      l2 = l2.next;
+    }
+    dummy = dummy.next;
+  }
+
+  if (l1 !== null) {
+    dummy.next = l1;
+  } else {
+    dummy.next = l2;
+  }
+
+  return head.next;
 };
 
 const l1 = {
@@ -112,4 +131,4 @@ const l2 = {
   },
 };
 
-console.log(mergeTwoLists("aa", "ab"));
+console.log(mergeTwoLists(l1, l2));
