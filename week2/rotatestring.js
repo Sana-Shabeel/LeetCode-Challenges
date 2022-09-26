@@ -29,20 +29,27 @@ abc -> cba
 */
 
 var rotateString = function (s, goal) {
-  let g = "";
   const arr = s.split("");
-
   for (let i = arr.length - 1; i >= 0; i--) {
     let removed = arr.shift();
     let pushed = arr.push(removed);
-
     if (arr.join("") == goal) {
       console.log(arr.join(""));
       break;
     }
   }
-
   return arr.join("") === goal;
 };
 
 console.log(rotateString("abcde", "cdeab"));
+
+// a different approach from yt
+
+var rotateString2 = function (s, goal) {
+  if (s.length !== goal.length) return false;
+  if (s.length === 0 && goal.length === 0) return true;
+  const concatinated = s + s;
+  return concatinated.includes(goal);
+};
+
+console.log(rotateString2("abcde", "cdeab"));
