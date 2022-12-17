@@ -14,13 +14,3 @@ var runningSum = function (nums) {
 
 // console.log(runningSum([1, 2, 3, 4, 0])); // 1 3 6 10
 console.log(runningSum([1, 1, 1, 1, 1])); // 1 3 6 10
-
-//   while (first < nums.length) {
-//     console.log("first", first);
-//     console.log("second", second);
-
-//     const x = nums.map((n) => n[first] + n[second]);
-
-//     first += 1;
-//     second += 1;
-//   }
