@@ -40,26 +40,23 @@ Right sum = nums[1] + nums[2] = 1 + -1 = 0
 */
 
 var pivotIndex = function (nums) {
+  //  set the pivot index at the start
   let pIndex = 0;
 
-  // console.log(-1 + -1); // === -1 + -1 + 0
-
-  // console.log(leftSide);
-  // console.log(rightSide);
+  // loop through the nums array and move the pivot index 1 place at every iteration
   while (pIndex < nums.length) {
+    // create 2 sides
+    // each side will sum all the numbers in its array using reduce
+
+    // using slice method, left side will start from 0 to the current index
     let leftSide = nums.slice(0, pIndex).reduce((sum, curr) => sum + curr, 0);
+
+    // right side will slice from the current index to the last index of the array
     let rightSide = nums.slice(pIndex + 1).reduce((sum, curr) => sum + curr, 0);
 
-    // console.log("leftSide", leftSide);
-    // console.log("rightSide", rightSide);
-    console.log("index", pIndex);
-    console.log("lastindex", pIndex + 1 === nums.length);
-
     if (leftSide > rightSide) {
-      console.log("left >");
       pIndex++;
     } else if (rightSide > leftSide && pIndex < nums.length) {
-      console.log("right >");
       pIndex++;
     } else if (leftSide === rightSide) {
       console.log("===");
@@ -73,7 +70,7 @@ var pivotIndex = function (nums) {
   }
 };
 
-// console.log(pivotIndex([-1, -1, -1, -1, -1, 0]));
+console.log(pivotIndex([-1, -1, -1, -1, -1, 0]));
 console.log(pivotIndex([1, 2, 3]));
 // console.log(pivotIndex([1, 7, 3, 6, 5, 6]));
 // console.log(pivotIndex([-1, -1, 0, 1, 1, 0]));
