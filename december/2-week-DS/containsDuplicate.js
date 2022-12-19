@@ -16,3 +16,14 @@ var containsDuplicate = function (nums) {
   return nums.map((n, i) => n === [...removeDuplicates][i]).includes(false);
 };
 console.log(containsDuplicate([1, 2, 3, 1]));
+
+// A better approach is to just compare the 2 arrays lengths
+// if set removed the duplicates then the removeDuplicates array would be less than old array
+// runtime for this was 145 ms
+
+var containsDuplicate = function (nums) {
+  const removeDuplicates = new Set(nums);
+  return nums.length !== [...removeDuplicates].length ? true : false;
+};
+
+console.log(containsDuplicate([1, 2, 3, 1]));
