@@ -1,6 +1,9 @@
 /*
 Given an integer array nums, find the subarray which has the largest sum and return its sum.
 
+
+KADANE'S ALGORITHM 
+https://www.youtube.com/watch?v=tmakGVOGV3A
  
 Example 1:
 
