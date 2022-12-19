@@ -74,3 +74,29 @@ console.log(pivotIndex([-1, -1, -1, -1, -1, 0]));
 console.log(pivotIndex([1, 2, 3]));
 // console.log(pivotIndex([1, 7, 3, 6, 5, 6]));
 // console.log(pivotIndex([-1, -1, 0, 1, 1, 0]));
+
+// ANOTHER APPROACH BY
+// https://medium.com/@michelle.wiginton00/leetcode-724-find-pivot-index-e11c9c7af524
+
+var pivotIndex2 = function (nums) {
+  let totalSum = nums.reduce((a, b) => a + b, 0);
+  //   for (let i = 0; i < nums.length; i++) {
+  //     totalSum += nums[i];
+  //   }
+
+  let leftSum = 0;
+
+  for (let i = 0; i < nums.length; i++) {
+    //we subtract the nums[i] because we do not want to include the pivot index in our sum calculations
+    let rightSum = totalSum - nums[i] - leftSum;
+
+    if (rightSum === leftSum) {
+      return i;
+    }
+    leftSum += nums[i];
+  }
+  return -1;
+};
+
+console.log(pivotIndex2([1, 7, 3, 6, 5, 6]));
+console.log(pivotIndex2([1, 2, 3]));
