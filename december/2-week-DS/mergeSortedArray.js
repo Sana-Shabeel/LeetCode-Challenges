@@ -37,8 +37,12 @@ Note that because m = 0, there are no elements in nums1. The 0 is only there to 
 */
 
 var merge = function (nums1, m, nums2, n) {
+  // cut the last 0's from the array
   nums1.length = nums1.length - n;
+
+  // replace the last 0's with nums2 array elements
   nums1.push(...nums2);
+  // sort the elements
   nums1.sort((a, b) => a - b);
 };
 console.log(merge([0], 0, [1], 1)); // [1]
