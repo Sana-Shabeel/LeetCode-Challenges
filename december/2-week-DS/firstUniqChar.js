@@ -27,11 +27,11 @@ Output: -1
 */
 
 var firstUniqChar = function (s) {
-  const dup = s.split("");
-  const [...set] = new Set(dup);
+  const splitString = s.split("");
+  const [...set] = new Set(splitString);
 
   const countOccur = (char) =>
-    dup.reduce((sum, curr) => (char === curr ? sum + 1 : sum + 0), 0);
+    splitString.reduce((sum, curr) => (char === curr ? sum + 1 : sum + 0), 0);
 
   for (let i = 0; i < set.length; i++) {
     const char = set[i];
@@ -41,7 +41,7 @@ var firstUniqChar = function (s) {
       continue;
     }
 
-    return dup.indexOf(char);
+    return splitString.indexOf(char);
   }
   return -1;
 };
