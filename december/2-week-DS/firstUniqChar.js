@@ -28,21 +28,25 @@ Output: -1
 
 var firstUniqChar = function (s) {
   const splitString = s.split("");
+
+  // stores each characters once
   const [...set] = new Set(splitString);
 
+  // count how many times a given character appears in splitString
   const countOccur = (char) =>
     splitString.reduce((sum, curr) => (char === curr ? sum + 1 : sum + 0), 0);
 
+  // loop through the set
   for (let i = 0; i < set.length; i++) {
     const char = set[i];
 
-    if (countOccur(char) !== 1) {
-      console.log(char);
-      continue;
-    }
+    // char appears more than once move on
+    if (countOccur(char) !== 1) continue;
 
+    // otherwise return the index of the character
     return splitString.indexOf(char);
   }
+
   return -1;
 };
 console.log(firstUniqChar("leetcode"));
