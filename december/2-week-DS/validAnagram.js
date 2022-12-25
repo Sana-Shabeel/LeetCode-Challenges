@@ -38,9 +38,11 @@ var isAnagram = function (s, t) {
 var isAnagram = function (s, t) {
   if (s.length !== t.length) return false;
 
+  // order the characters alphabetically
   const sortS = s.split("").sort().join("");
   const sortT = t.split("").sort().join("");
 
+  // and compare
   return sortS === sortT;
 };
 
