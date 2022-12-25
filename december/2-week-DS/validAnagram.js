@@ -11,3 +11,5 @@ var isAnagram = function (s, t) {
 
   return splitStr.length === 0 ? true : false;
 };
+console.log(isAnagram("anagram", "nagaram"));
+console.log(isAnagram("aacc", "ccac"));
