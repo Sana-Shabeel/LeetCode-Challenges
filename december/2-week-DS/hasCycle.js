@@ -28,7 +28,7 @@ Explanation: There is no cycle in the linked list.
 */
 
 var hasCycle = function (head) {
-  // we are going to use the 2 pointer technique
+  // We are going to use the 2 pointer method
 
   if (head === null) return false;
 
