@@ -48,5 +48,7 @@ var hasCycle = function (head) {
     slow = slow.next;
     fast = fast.next.next;
   }
+
+  // if they do cross each other the we will exit the loop and return true
   return true;
 };
