@@ -15,3 +15,17 @@ The start number will always be smaller than the end number. Both numbers can be
 
 
 */
+
+function dontGiveMeFive(start, end) {
+  // create an array of numbers from 'start' to 'end'
+  const nums = [];
+  for (let i = start; i <= end; i++) {
+    if (i.toString().includes(5)) {
+      // console.log(i);
+      continue;
+    }
+    nums.push(i);
+  }
+
+  return nums.length;
+}
