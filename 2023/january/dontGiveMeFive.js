@@ -27,3 +27,7 @@ function dontGiveMeFive(start, end) {
 
   return nums.length;
 }
+
+console.log(dontGiveMeFive(1, 9));
+console.log(dontGiveMeFive(4, 17));
+console.log(dontGiveMeFive(-4, 17));
