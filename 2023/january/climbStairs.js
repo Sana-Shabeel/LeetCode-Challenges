@@ -10,3 +10,4 @@ var climbStairs = function (n) {
 
   return two;
 };
+console.log(climbStairs(4));
