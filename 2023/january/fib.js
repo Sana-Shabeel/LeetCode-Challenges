@@ -26,7 +26,7 @@ Explanation: F(4) = F(3) + F(2) = 2 + 1 = 3.
 */
 
 var fib = function (n) {
-  if (n === 0 || n === 1) return n;
+  if (n <= 2) return n;
 
   return fib(n - 1) + fib(n - 2);
 };
