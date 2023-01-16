@@ -46,9 +46,6 @@ var similarPairs = function (words) {
     for (let j = i + 1; j < arr.length; j++) {
       const second = arr[j];
 
-      // console.log(i, "first", first);
-      // console.log(j, "second", second);
-
       if (first === second) {
         count++;
       }
