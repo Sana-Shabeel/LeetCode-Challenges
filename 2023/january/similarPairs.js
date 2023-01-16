@@ -30,3 +30,30 @@ Input: words = ["nba","cba","dba"]
 Output: 0
 Explanation: Since there does not exist any pair that satisfies the conditions, we return 0.
 */
+var similarPairs = function (words) {
+  const arr = [].flat();
+  words.forEach((s, i) => {
+    const set = new Set(s);
+
+    // from {'a','b'} to 'ab'
+    arr.push([...set].sort().join(""));
+  });
+
+  let count = 0;
+  for (let i = 0; i < arr.length; i++) {
+    const first = arr[i];
+
+    for (let j = i + 1; j < arr.length; j++) {
+      const second = arr[j];
+
+      // console.log(i, "first", first);
+      // console.log(j, "second", second);
+
+      if (first === second) {
+        count++;
+      }
+    }
+  }
+
+  return count;
+};
