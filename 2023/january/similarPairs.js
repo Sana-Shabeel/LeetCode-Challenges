@@ -31,7 +31,9 @@ Output: 0
 Explanation: Since there does not exist any pair that satisfies the conditions, we return 0.
 */
 var similarPairs = function (words) {
+  // will be pushing arrays here
   const arr = [].flat();
+
   words.forEach((s, i) => {
     const set = new Set(s);
 
