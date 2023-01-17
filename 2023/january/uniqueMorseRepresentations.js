@@ -47,3 +47,21 @@ var MORSE_CODE = {
   y: "-.--",
   z: "--..",
 };
+
+var uniqueMorseRepresentations = function (words) {
+  let morse = [];
+  for (let i = 0; i < words.length; i++) {
+    const word = words[i];
+    let m = "";
+    for (let j = 0; j < word.length; j++) {
+      const s = word[j];
+
+      m += MORSE_CODE[s];
+    }
+
+    morse.push(m);
+  }
+
+  const [...set] = new Set(morse);
+  return set.length;
+};
