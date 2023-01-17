@@ -65,3 +65,6 @@ var uniqueMorseRepresentations = function (words) {
   const [...set] = new Set(morse);
   return set.length;
 };
+
+console.log(uniqueMorseRepresentations(["gin", "zen", "gig", "msg"]));
+console.log(uniqueMorseRepresentations(["a"]));
