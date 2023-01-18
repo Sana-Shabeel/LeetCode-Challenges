@@ -17,3 +17,24 @@ Input: left = 47, right = 85
 Output: [48,55,66,77]
 
 */
+
+var selfDividingNumbers = function (left, right) {
+  var selfDiv = [];
+
+  // loop from left(1) until right(22)
+  for (left; left < right + 1; left++) {
+    // type number doesn't have length method
+    if (left.toString().length === 1) {
+      selfDiv.push(left);
+    } else if (left.toString().length > 1) {
+      // every checks if EVERY element in the array passes the check,
+      // it return false if even 1 element doesn't passes the check
+      // if it returns true then that number is self divisible
+      if ([...left.toString().split("")].every((n) => left % n === 0)) {
+        selfDiv.push(left);
+      }
+    }
+  }
+
+  return selfDiv;
+};
