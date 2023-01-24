@@ -29,3 +29,20 @@ function singleNumber(nums) {
 
   return [...set];
 }
+
+var singleNumber = function (nums) {
+  let numsob = {};
+  if (nums.length == 1) return nums[0];
+
+  for (n of nums) {
+    if (numsob[n]) {
+      numsob[n] += 1;
+    } else if (!numsob[n]) {
+      numsob[n] = 1;
+    }
+  }
+
+  for (key in numsob) {
+    if (numsob[key] == 1) return key;
+  }
+};
