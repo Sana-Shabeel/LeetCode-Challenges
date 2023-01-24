@@ -15,3 +15,17 @@ Input: nums = [4,1,2,1,2]
 Output: 4
 
 */
+
+function singleNumber(nums) {
+  const set = new Set();
+  for (let i = 0; i < nums.length; i++) {
+    const element = nums[i];
+    if (set.has(element)) {
+      set.delete(element);
+    } else {
+      set.add(element);
+    }
+  }
+
+  return [...set];
+}
