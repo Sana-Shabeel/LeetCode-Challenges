@@ -64,6 +64,9 @@ var twoSum = function (nums, target) {
   for (let i = 0; i < nums.length; i++) {
     const subtractTarget = target - nums[i];
 
+    // the goal is to add 2 number to get the target
+    // so if we subtract the target once and then look for the result in the hashmap
+
     if (hash.has(subtractTarget)) {
       return [i, hash.get(subtractTarget)];
     }
