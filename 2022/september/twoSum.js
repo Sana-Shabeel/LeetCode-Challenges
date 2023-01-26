@@ -55,3 +55,21 @@ var twoSum = function (nums, target) {
 };
 
 console.log(twoSum([2, 7, 11, 15], 9));
+
+// Method using hashmap
+
+var twoSum = function (nums, target) {
+  const hash = new Map();
+
+  for (let i = 0; i < nums.length; i++) {
+    const subtractTarget = target - nums[i];
+
+    if (hash.has(subtractTarget)) {
+      return [i, hash.get(subtractTarget)];
+    }
+
+    hash.set(nums[i], i);
+  }
+
+  return hash;
+};
