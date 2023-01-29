@@ -1,8 +1,7 @@
 /*
 
 
-  for (let i = 0; i < letterCombination.length; i++) {
-    const arr = letterCombination[i];
+
 
     result.push(
       letterCombination[i].flatMap((d) => {
@@ -33,7 +32,6 @@
 
 
 
-  return letterCombination;
 */
 
 var letterCombinations = function (digits) {
