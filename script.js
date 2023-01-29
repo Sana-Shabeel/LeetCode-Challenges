@@ -8,8 +8,6 @@
   
   
 
-  const letterCombination = [];
-  const result = [];
 
   for (let i = 0; i < digits.length; i++) {
     const digitIdx = digits[i] - 2;
