@@ -7,7 +7,6 @@
   
   
   
-  if (digits.length === 1) return digitLetter[parseInt(digits - 2)];
 
   const letterCombination = [];
   const result = [];
