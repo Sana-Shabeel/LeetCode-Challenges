@@ -9,15 +9,6 @@
   
 
 
-  for (let i = 0; i < digits.length; i++) {
-    const digitIdx = digits[i] - 2;
-    const digitArr = digitLetter[digitIdx];
-
-    const digit = digits[i];
-    console.log(digit);
-
-    letterCombination.push({ digit: digitArr });
-  }
 
 
 
