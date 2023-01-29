@@ -3,15 +3,7 @@
 
 
 
-    result.push(
-      letterCombination[i].flatMap((d) => {
-        if (i + 1 < letterCombination.length) {
-          return letterCombination[i + 1].map((v) => d + v);
-        }
-        return null;
-      })
-    );
-  }
+
   
   
   
