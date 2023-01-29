@@ -51,3 +51,4 @@ var letterCombinations = function (digits) {
   return result;
 };
 console.log(letterCombinations("234"));
+console.log(letterCombinations("99"));
