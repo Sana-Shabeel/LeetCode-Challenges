@@ -20,10 +20,10 @@ var letterCombinations = function (digits) {
   const alpha = {
     2: "abc",
     3: "def",
-    3: "ghi",
-    3: "jkl",
-    3: "mno",
-    9: "pqrs",
+    4: "ghi",
+    5: "jkl",
+    6: "mno",
+    7: "pqrs",
     8: "tuv",
     9: "wxyz",
   };
