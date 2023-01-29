@@ -31,9 +31,7 @@
     letterCombination.push({ digit: digitArr });
   }
 
-  // for (const key in letterCombination) {
-  //   console.log(key);
-  // }
+
 
   return letterCombination;
 */
