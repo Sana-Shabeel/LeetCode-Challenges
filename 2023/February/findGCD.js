@@ -17,3 +17,19 @@ Example 2:
 
 
 */
+
+var findGCD = function (nums) {
+  let biggest = Math.max(...nums);
+  let smallest = Math.min(...nums);
+  let r = biggest % smallest;
+
+  while (r !== 0) {
+    biggest = smallest;
+    smallest = r;
+    r = biggest % smallest;
+  }
+
+  return smallest;
+};
+
+console.log(findGCD([2, 5, 6, 9, 10]));
