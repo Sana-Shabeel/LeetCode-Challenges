@@ -36,6 +36,7 @@ function increment(digits) {
   for (let i = digits.length - 1; i > -1; i--) {
     if (digits[i] < 9) {
       digits[i]++;
+      // add 1 and returns at the first iteration
       return digits;
     } else {
       digits[i] = 0;
