@@ -21,3 +21,8 @@ Thus, the result should be [1,0].
 
 
 */
+var plusOne = function (digits) {
+  const toBigInt = BigInt(digits.join("")) + 1n;
+
+  return toBigInt.toString().split("").map(Number);
+};
