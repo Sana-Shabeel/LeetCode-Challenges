@@ -30,9 +30,9 @@ const bToD = (b) => {
 };
 
 var addBinary = function (a, b) {
-  // let numA = bToD(a);
-  // let numB = bToD(b);
-  // return (numA + numB).toString(2);
+  let numA = bToD(a);
+  let numB = bToD(b);
+  return (numA + numB).toString(2);
 };
 
 // Alt solution
