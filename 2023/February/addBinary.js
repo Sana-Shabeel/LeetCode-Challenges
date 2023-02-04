@@ -17,3 +17,20 @@ Constraints:
 a and b consist only of '0' or '1' characters.
 Each string does not contain leading zeros except for the zero itself.
 */
+
+const bToD = (b) => {
+  let binary = b.split("");
+
+  let decimal = 0n;
+  for (let i = 0; i < binary.length; i++) {
+    decimal = decimal * 2n + BigInt(parseInt(binary[i]));
+  }
+
+  return decimal;
+};
+
+var addBinary = function (a, b) {
+  // let numA = bToD(a);
+  // let numB = bToD(b);
+  // return (numA + numB).toString(2);
+};
