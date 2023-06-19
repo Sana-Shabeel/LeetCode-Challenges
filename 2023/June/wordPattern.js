@@ -35,3 +35,5 @@ var wordPattern = function (pattern, s) {
 };
 
 console.log(wordPattern(["abba", "dog cat cat dog"]));
+
+console.log(wordPattern(["abba", "dog cat cat fish"]));
