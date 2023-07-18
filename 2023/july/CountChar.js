@@ -22,3 +22,5 @@ function count(string) {
 }
 
 console.log(count("abaaaab"));
+
+// alternative solution
